@@ -11,3 +11,18 @@
           }
       }
   });
+
+
+  $.ajax({
+      type: 'POST',
+      url: '$URL',
+      dataType:'JSON',
+      data: $('form').serialize(),
+      success: function (obj) {
+          if (obj.result == 'success') {
+
+          } else {
+              alert(' Something Went Wrong');              
+          }
+      }
+  });
